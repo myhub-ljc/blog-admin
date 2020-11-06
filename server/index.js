@@ -3,7 +3,7 @@ const app = express()
 
 //允许跨域
 app.use(require('cors')())
-//要告诉expres识别客户端传过来的json
+//要告诉express识别客户端传过来的json数据
 app.use(express.json())
 
 //配置数据库
@@ -17,7 +17,9 @@ mongoose.connect('mongodb://localhost:27017/element-admin', {
 //建立数据模型(这个是文档模型)
 const Article = mongoose.model('Article', new mongoose.Schema({
   title: {type: String},
-  body: {type: String}
+  price: {type: String},
+  mount: {type: Number},
+  context: {type: String}
 }))
 
 app.get('/', async (req, res) => {
@@ -57,5 +59,5 @@ app.put('/api/articles/:id', async (req, res) => {
 })
 
 app.listen(3001, () => {
-  console.log('https://localhost:3001/')
+  console.log('数据库连接成功https://localhost:3001/')
 })

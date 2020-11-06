@@ -1,16 +1,22 @@
 <template>
   <div>
-    <el-table :data="articles">
-      <el-table-column prop="title" label="标题" width="140">
+    <el-table
+    :data="articles"
+    style="width: 100%; text-align: center;">
+      <el-table-column prop="title" label="书名" width="200">
       </el-table-column>
-      <el-table-column prop="body" label="内容" width="220">
+      <el-table-column prop="context" label="书籍简介" width="200">
       </el-table-column>
-      <el-table-column fixed="right" label="操作" width="100">
-      <template slot-scope="scope">
-        <el-button @click="edit(scope.row._id)" type="text" size="small">编辑</el-button>
-        <el-button @click="remove(scope.row._id)" type="text" size="small">删除</el-button>
-      </template>
-    </el-table-column>
+      <el-table-column prop="price" label="价格" width="200">
+      </el-table-column>
+      <el-table-column prop="mount" label="数量" width="200">
+      </el-table-column>  
+      <el-table-column fixed="right" label="操作" width="200">
+        <template slot-scope="scope">
+          <el-button @click="edit(scope.row._id)" type="text" size="small"><i class="el-icon-tickets"> </i>编辑</el-button>
+          <el-button @click="remove(scope.row._id)" type="text" size="small"><i class="el-icon-delete"> </i>删除</el-button>
+        </template>
+      </el-table-column>
     </el-table>
   </div>
 </template>
@@ -50,5 +56,7 @@ export default {
 </script>
 
 <style>
-
+.el-table-column{
+  text-align: center;
+}
 </style>
