@@ -5,12 +5,12 @@
     style="width: 100%; text-align: center;">
       <el-table-column prop="title" label="书名" width="200">
       </el-table-column>
-      <el-table-column prop="context" label="书籍简介" width="200">
-      </el-table-column>
       <el-table-column prop="price" label="价格" width="200">
       </el-table-column>
       <el-table-column prop="mount" label="数量" width="200">
       </el-table-column>  
+      <el-table-column prop="context" label="书籍简介" width="200">
+      </el-table-column>
       <el-table-column fixed="right" label="操作" width="200">
         <template slot-scope="scope">
           <el-button @click="edit(scope.row._id)" type="text" size="small"><i class="el-icon-tickets"> </i>编辑</el-button>

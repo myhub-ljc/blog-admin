@@ -11,12 +11,10 @@
   </el-aside>
   
   <el-container>
-    
     <el-header style="text-align: center; font-size: 12px;">
-      <img src="http://r.photo.store.qq.com/psc?/V10dFOfT2Jfiu7/OErzpq5D9LJxW5knQIpOPpsbteMejwvL14SrtwoAeMBrHCQlLThBNtBtM9Fcs0GKDYF.z6vrpWj7XAylgvu*YrQ0EeHoB9542NIT1gV7ns8!/r" alt="">
+      <img src="./assets/logo.png" alt="">
       <h2 style="text-align: center; margin-top: 0">VV校园后台管理系统</h2>
-    </el-header>
-    
+    </el-header> 
     <el-main>
       <router-view></router-view>
     </el-main>
@@ -29,7 +27,8 @@
 export default {
   name: 'app',
   components: {    
-  }
+  },
+  
 }
 </script>
 

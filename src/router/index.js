@@ -1,11 +1,11 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-const ListArticle = () => import('../views/ListArticle')
-const CreateArticle = () => import('../views/CreateArticle')
-const EditArticle = () => import('../views/EditArticle')
+const ListArticle = () => import('../pages/ListBooks');
+const CreateArticle = () => import('../pages/CreateBooks');
+const EditArticle = () => import('../pages/EditBooks');
 
 const routes = [
   {
