@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost:27017/element-admin', {
   useCreateIndex: true
 });
 
-//建立数据模型(这个是书籍模型)
+//建立数据模型
 const Article = mongoose.model('Article', new mongoose.Schema({
   title: {type: String},
   price: {type: String},
@@ -26,19 +26,19 @@ app.get('/', async (req, res) => {
   res.send('index')
 });
 
-//新增文章的接口
+//新增博客信息的接口
 app.post('/api/articles', async (req, res) => {
   const article = await Article.create(req.body)
   res.send(article)
 });
 
-//文章列表的接口
+//博客信息列表的接口
 app.get('/api/articles', async (req, res) => {
   const articles = await Article.find()
   res.send(articles)
 });
 
-//删除文章
+//删除博客信息
 app.delete('/api/articles/:id', async (req, res) => {
   await Article.findByIdAndDelete(req.params.id)
   res.send({
@@ -46,13 +46,13 @@ app.delete('/api/articles/:id', async (req, res) => {
   })
 });
 
-//文章详情
+//博客信息详情
 app.get('/api/articles/:id', async (req, res) => {
   const article = await Article.findById(req.params.id)
   res.send(article)
 });
 
-//修改文章
+//修改博客信息
 app.put('/api/articles/:id', async (req, res) => {
   const article = await Article.findByIdAndUpdate(req.params.id, req.body)
   res.send(article)

@@ -1,15 +1,15 @@
 <template>
   <el-form @submit.native.prevent="saveArticle" ref="form" :model="article" label-width="80px">
-    <el-form-item label="书名">
+    <el-form-item label="博客主">
       <el-input v-model="article.title"></el-input>
     </el-form-item>
-    <el-form-item label="价格">
+    <el-form-item label="博客名称">
       <el-input v-model="article.price"></el-input>
     </el-form-item>
-    <el-form-item label="数量">
+    <el-form-item label="博客数量">
       <el-input v-model="article.mount"></el-input>
     </el-form-item>
-    <el-form-item label="书籍简介">
+    <el-form-item label="博客简介">
       <el-input maxlength="20" type="textarea" v-model="article.context"></el-input>
     </el-form-item>
     <el-form-item>
@@ -30,7 +30,7 @@ export default {
     saveArticle() {
       this.$http.post('articles', this.article).then(res => {
         this.$message({
-          message: "文章创建成功",
+          message: "创建成功",
           type: "success"
         })
         console.log(res)

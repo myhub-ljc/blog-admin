@@ -3,9 +3,9 @@
   <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
     <el-menu router :default-openeds="['1']">
       <el-submenu index="1">
-        <template slot="title"><i class="el-icon-tickets"></i>二手书管理</template>
-          <el-menu-item index="/articles/index">二手书列表</el-menu-item>
-          <el-menu-item index="/articles/create">新增书籍</el-menu-item>
+        <template slot="title"><i class="el-icon-tickets"></i>博客信息管理</template>
+          <el-menu-item index="/articles/index">博客信息列表</el-menu-item>
+          <el-menu-item index="/articles/create">新增博客信息</el-menu-item>
       </el-submenu>
     </el-menu>
   </el-aside>
@@ -13,7 +13,7 @@
   <el-container>
     <el-header style="text-align: center; font-size: 12px;">
       <img src="./assets/logo.png" alt="">
-      <h2 style="text-align: center; margin-top: 0">VV校园后台管理系统</h2>
+      <h2 style="text-align: center; margin-top: 0">VV校园博客信息管理系统</h2>
     </el-header> 
     <el-main>
       <router-view></router-view>
